@@ -94,6 +94,6 @@ $H_A$ = There is a difference in push-ups based on position.
 
 With assistance from ChatGPT, I was ablt to write some R code to Create a box plot.
 
-Also, by using the Numerical-Cat helper tool, I was able to perform a T Test and a Summary of the data (favstats).
+Also, by using the Numerical-Cat helper tool, I was able to perform a T Test and a Summary of the data  with (favstats).
 
 The box plot in conjunction with the summary and T test show that we can reject the $H_0$ leaving only the $H_A$.
