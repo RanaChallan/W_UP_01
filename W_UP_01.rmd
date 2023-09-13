@@ -40,10 +40,37 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 ### Graphical Descriptive Results
 
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+### Plot boxplots
+```{r include=TRUE,echo=FALSE}
+ggplot(data = mydata, aes(x = pushups, y = position)) +
+  geom_boxplot() +
+  labs(title = "Pushups by Position", x = "Pushups", y = "Position") +
+  coord_flip() + 
+  theme(plot.title = element_text(size = 18, hjust = 0.5))  # Adjust title size and center it
+```
+  
+I'm looking at the columns in the chart above, the left are the line positions, and on the right are the skilled positions.
+
+The height of the skilled box is much higher.
+
+The 25th Percentile on the skilled players is higher than the 75th Percentile of the line players.
+
+This seems to indicate that skilled positions can do more push-ups than line positions.
+
+
+
+
+
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(pushups~position,data=mydata)
+```
+
+The average number of pushups that a line player can do is about one third the amount of an average skilled player.
 
 ## Inferential Results
 
